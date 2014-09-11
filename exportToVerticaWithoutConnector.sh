@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "exec @Statistics iostats 0;" | /opt/voltdb-ent-4.0.1/bin/sqlcmd --servers=nsql01,nsql02,nsql03 --port=21212 --output-format=csv --output-skip-metadata | sed -e '1d' -e '/^\s*$/d' | ssh dbadmin@vert01 "/opt/vertica/bin/vsql -U dbadmin -w passwd -c \"COPY voltdb.iostatsVoltDB FROM LOCAL STDIN DELIMITER ',' DIRECT;\""
