@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<deployment>
+    <cluster hostcount="3" kfactor="1" />
+    <export enabled="true" target="jdbc">
+        <configuration>
+            <property name="jdbcurl">jdbc:vertica://vert01:5433/boa</property>
+            <property name="jdbcuser">dbadmin</property>
+            <property name="jdbcpassword">yourPassword</property>
+            <property name="schema">voltdb</property>
+            <property name="ignoregenerations">true</property>
+            <property name="skipinternals">true</property>
+        </configuration>
+    </export>
+    <paths>
+        <voltdbroot path="/opt/voltdb/" />
+        <exportoverflow path="/tmp/export/" />
+    </paths>
+    <httpd enabled="true">
+        <jsonapi enabled="true" />
+    </httpd>
+</deployment>
