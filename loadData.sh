@@ -1,3 +1,3 @@
 #!/bin/bash
 
-csvloader -p teeLoader < 1.csv
+csvloader -p teeLoader < inputData.csv
