@@ -10,6 +10,6 @@ for node in {nsql01,nsql02,nsql03}; do
 
 	echo "Installing VoltDB on node $node"
 	scp config "$installerScript" "$voltdbPackage" "$verticaClientRPM" "$voltdbUser"@"$node":"$workDir"/
-	ssh "$voltdbUser"@"$node" "$workDir"/"$installerScript"
+	ssh "$voltdbUser"@"$node" cd "$workDir" && "$workDir"/"$installerScript"
 
 done
