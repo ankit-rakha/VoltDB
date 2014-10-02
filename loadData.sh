@@ -4,5 +4,5 @@
 
 inputFile="$1"
 
-"$voltdbBin"/csvloader -p VoltDBLoader < "$workDir"/"$inputFile"
-"$voltdbBin"/csvloader -p VoltDBExportLoader < "$workDir"/"$inputFile"
+"$voltdbBin"/csvloader -s nsql01,nsql02,nsql03 -p VoltDBLoader < "$workDir"/"$inputFile"
+"$voltdbBin"/csvloader -s nsql01,nsql02,nsql03 -p VoltDBExportLoader < "$workDir"/"$inputFile"
