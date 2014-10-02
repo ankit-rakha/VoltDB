@@ -1,3 +1,5 @@
 #!/bin/bash
 
-csvloader -p teeLoader < inputData.csv
+. config
+
+"$voltdbBin"/csvloader -p teeLoader < "$workDir"/inputData.csv
