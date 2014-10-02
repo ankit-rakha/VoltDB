@@ -1,6 +1,6 @@
 voltdbBin=/opt/voltdb/bin
 licensePath=/root/VOLTDB/LICENSES
-workDir=~/VOLTDB
+workDir="$PWD"
 
 schemaFile=schema.sql
 catalogFile=catalog.jar
