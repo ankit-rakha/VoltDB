@@ -2,4 +2,6 @@
 
 . config
 
-"$voltdbBin"/csvloader -p teeLoader < "$workDir"/inputData.csv
+inputFile="$1"
+
+"$voltdbBin"/csvloader -p teeLoader < "$workDir"/"$inputFile"
