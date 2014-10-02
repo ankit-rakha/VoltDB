@@ -12,7 +12,7 @@ CREATE TABLE googlersExport
 );
 
 CREATE PROCEDURE VoltDBLoader AS
-        INSERT INTO googlersExport (googlerID, googlerSearchKeyWord)
+        INSERT INTO googlers (googlerID, googlerSearchKeyWord)
                 VALUES (?,?);
 
 EXPORT TABLE googlersExport;
