@@ -11,8 +11,12 @@ CREATE TABLE googlersExport
         googlerSearchKeyWord varchar(50) NOT NULL,
 );
 
+CREATE PROCEDURE VoltDBLoader AS
+        INSERT INTO googlersExport (googlerID, googlerSearchKeyWord)
+                VALUES (?,?);
+
 EXPORT TABLE googlersExport;
 
-CREATE PROCEDURE teeLoader AS
+CREATE PROCEDURE VoltDBExportLoader AS
         INSERT INTO googlersExport (googlerID, googlerSearchKeyWord)
                 VALUES (?,?);
