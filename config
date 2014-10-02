@@ -1,0 +1,10 @@
+voltdbBin=/opt/voltdb/bin
+licensePath=/root/VOLTDB/LICENSES
+workDir=~/VOLTDB
+
+schemaFile=schema.sql
+catalogFile=catalog.jar
+deploymentFile=deployment.xml
+licenseFile=license.xml
+electedMaster=nsql01
+voltdbUser=root
