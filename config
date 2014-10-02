@@ -1,5 +1,7 @@
 voltdbBin=/opt/voltdb/bin
 licensePath=/root/VOLTDB/LICENSES
+verticaDriverFilePath=/opt/vertica/java/lib
+voltdbDriverFilePath=/opt/voltdb/lib/extension
 workDir="$PWD"
 
 schemaFile=schema.sql
