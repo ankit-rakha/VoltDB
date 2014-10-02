@@ -2,6 +2,8 @@
 
 . config
 
+voltdbPackageBaseName=$(basename "$voltdbPackage" .tar.gz | sed -e 's/LINUX-//g')
+
 rm -rf /opt/voltdb
 tar -zxvf ~/"$voltdbPackage" -C /opt
 mv /opt/"$voltdbPackageBaseName" /opt/voltdb

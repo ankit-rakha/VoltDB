@@ -12,5 +12,4 @@ electedMaster=nsql01
 voltdbUser=root
 installerScript=voltdbInstall.sh
 voltdbPackage=LINUX-voltdb-ent-4.7.tar.gz
-voltdbPackageBaseName=$(basename "$voltdbPackage" .tar.gz)
 verticaClientRPM=vertica-client-7.1.0-0.x86_64.rpm
