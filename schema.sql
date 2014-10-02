@@ -2,6 +2,7 @@ CREATE TABLE googlers
 (
         googlerID integer UNIQUE NOT NULL,
         googlerSearchKeyWord varchar(50) NOT NULL,
+		googlerCorKeyWord varchar(50) NOT NULL,
         PRIMARY KEY(googlerID)
 );
 
@@ -18,5 +19,4 @@ CREATE PROCEDURE VoltDBLoader AS
 EXPORT TABLE googlersExport;
 
 CREATE PROCEDURE VoltDBExportLoader AS
-        INSERT INTO googlersExport (googlerID, googlerSearchKeyWord)
-                VALUES (?,?);
+        INSERT INTO googlersExport SELECT googlerID,googlerSearchKeyWord FROM googlers WHERE googlerID<5000;
